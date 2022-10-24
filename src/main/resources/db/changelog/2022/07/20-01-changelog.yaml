@@ -1,0 +1,717 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1658320917816-1
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_address
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: latitude
+                  type: VARCHAR(255)
+              - column:
+                  name: longitude
+                  type: VARCHAR(255)
+              - column:
+                  name: city_id
+                  type: BIGINT
+              - column:
+                  name: street
+                  type: VARCHAR(255)
+              - column:
+                  name: house
+                  type: VARCHAR(255)
+              - column:
+                  name: flat
+                  type: VARCHAR(255)
+              - column:
+                  name: level
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: elevator
+                  type: BOOLEAN
+              - column:
+                  name: user_id
+                  type: BIGINT
+            tableName: address
+  - changeSet:
+      id: 1658320917816-2
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_approve_code
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: phone_number
+                  type: VARCHAR(255)
+              - column:
+                  name: code
+                  type: VARCHAR(255)
+              - column:
+                  name: is_activated
+                  type: BOOLEAN
+            tableName: approve_code
+  - changeSet:
+      id: 1658320917816-3
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_city
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: country_id
+                  type: BIGINT
+            tableName: city
+  - changeSet:
+      id: 1658320917816-4
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_country
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+            tableName: country
+  - changeSet:
+      id: 1658320917816-5
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_delivery_service_message
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: recipient_id
+                  type: BIGINT
+              - column:
+                  name: sender_id
+                  type: BIGINT
+              - column:
+                  name: context
+                  type: VARCHAR(255)
+              - column:
+                  name: message_context_type
+                  type: VARCHAR(255)
+              - column:
+                  name: date
+                  type: VARCHAR(255)
+            tableName: delivery_service_message
+  - changeSet:
+      id: 1658320917816-6
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_grocery_basket
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: userid
+                  type: BIGINT
+              - column:
+                  name: product_id
+                  type: BIGINT
+            tableName: grocery_basket
+  - changeSet:
+      id: 1658320917816-7
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_manufacturer
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: logo
+                  type: VARCHAR(255)
+              - column:
+                  name: sum
+                  type: VARCHAR(255)
+            tableName: manufacturer
+  - changeSet:
+      id: 1658320917816-8
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_orders
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: address
+                  type: VARCHAR(255)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(255)
+              - column:
+                  name: context_type
+                  type: VARCHAR(255)
+              - column:
+                  name: user_id
+                  type: BIGINT
+            tableName: orders
+  - changeSet:
+      id: 1658320917816-9
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_product
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: product_type
+                  type: VARCHAR(255)
+              - column:
+                  name: product_container_material_type
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: INT
+              - column:
+                  name: volume
+                  type: FLOAT
+              - column:
+                  name: seller_id
+                  type: BIGINT
+              - column:
+                  name: manufacturer_id
+                  type: BIGINT
+            tableName: product
+  - changeSet:
+      id: 1658320917816-10
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_product_to_order
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: product_id
+                  type: BIGINT
+              - column:
+                  name: order_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: count
+                  type: INT
+            tableName: product_to_order
+  - changeSet:
+      id: 1658320917816-11
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_seller
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: inn
+                  type: VARCHAR(255)
+              - column:
+                  name: bik
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+            tableName: seller
+  - changeSet:
+      id: 1658320917816-12
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_seller_to_user
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: sale_organisation_id
+                  type: BIGINT
+              - column:
+                  name: user_id
+                  type: BIGINT
+            tableName: seller_to_user
+  - changeSet:
+      id: 1658320917816-13
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_session
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: login_date
+                  type: VARCHAR(255)
+              - column:
+                  name: logout_date
+                  type: VARCHAR(255)
+              - column:
+                  name: user_id
+                  type: BIGINT
+              - column:
+                  name: token
+                  type: VARCHAR(255)
+            tableName: session
+  - changeSet:
+      id: 1658320917816-14
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_users
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  name: deleted_at
+                  type: DATETIME
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: full_name
+                  type: VARCHAR(255)
+              - column:
+                  name: login
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(255)
+            tableName: users
+  - changeSet:
+      id: 1658320917816-15
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: city_id
+            baseTableName: address
+            constraintName: FK_ADDRESS_ON_CITY
+            referencedColumnNames: id
+            referencedTableName: city
+  - changeSet:
+      id: 1658320917816-16
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: address
+            constraintName: FK_ADDRESS_ON_USER
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-17
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: country_id
+            baseTableName: city
+            constraintName: FK_CITY_ON_COUNTRY
+            referencedColumnNames: id
+            referencedTableName: country
+  - changeSet:
+      id: 1658320917816-18
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: recipient_id
+            baseTableName: delivery_service_message
+            constraintName: FK_DELIVERY_SERVICE_MESSAGE_ON_RECIPIENT
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-19
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: sender_id
+            baseTableName: delivery_service_message
+            constraintName: FK_DELIVERY_SERVICE_MESSAGE_ON_SENDER
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-20
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: product_id
+            baseTableName: grocery_basket
+            constraintName: FK_GROCERY_BASKET_ON_PRODUCT
+            referencedColumnNames: id
+            referencedTableName: product
+  - changeSet:
+      id: 1658320917816-21
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: userid
+            baseTableName: grocery_basket
+            constraintName: FK_GROCERY_BASKET_ON_USERID
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-22
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: orders
+            constraintName: FK_ORDERS_ON_USER
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-23
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: manufacturer_id
+            baseTableName: product
+            constraintName: FK_PRODUCT_ON_MANUFACTURER
+            referencedColumnNames: id
+            referencedTableName: manufacturer
+  - changeSet:
+      id: 1658320917816-24
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: seller_id
+            baseTableName: product
+            constraintName: FK_PRODUCT_ON_SELLER
+            referencedColumnNames: id
+            referencedTableName: seller
+  - changeSet:
+      id: 1658320917816-25
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: order_id
+            baseTableName: product_to_order
+            constraintName: FK_PRODUCT_TO_ORDER_ON_ORDER
+            referencedColumnNames: id
+            referencedTableName: orders
+  - changeSet:
+      id: 1658320917816-26
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: product_id
+            baseTableName: product_to_order
+            constraintName: FK_PRODUCT_TO_ORDER_ON_PRODUCT
+            referencedColumnNames: id
+            referencedTableName: product
+  - changeSet:
+      id: 1658320917816-27
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: sale_organisation_id
+            baseTableName: seller_to_user
+            constraintName: FK_SELLER_TO_USER_ON_SALE_ORGANISATION
+            referencedColumnNames: id
+            referencedTableName: seller
+  - changeSet:
+      id: 1658320917816-28
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: seller_to_user
+            constraintName: FK_SELLER_TO_USER_ON_USER
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 1658320917816-29
+      author: Alexander (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: session
+            constraintName: FK_SESSION_ON_USER
+            referencedColumnNames: id
+            referencedTableName: users
+

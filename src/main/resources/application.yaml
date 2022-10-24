@@ -1,0 +1,20 @@
+server:
+  port: 7004
+  servlet:
+    encoding:
+      charset: UTF-8
+      force-response: true
+spring:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: 89187786606Alex
+    url: jdbc:postgresql://localhost:5432/watershop
+    username: postgres
+    liquibase:
+      change-log: classpath:liquibase/db/changelog/db.changelog-master.yaml
+
+module-name: waterShop
+api-version: 1.0
